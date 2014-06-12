@@ -1,0 +1,36 @@
+.grid {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.grid > header {
+  height: 60px;
+  display: flex;
+}
+
+.grid > header > .logo {
+  flex: 0 0 14em;
+}
+
+.grid > header > .search {
+  flex: 1;
+}
+
+.grid > header > .login {
+  /*flex: 0 0 10em;*/
+}
+
+.grid-body {
+  display: flex;
+  flex: 1;
+}
+
+.grid-body > main {
+  flex: 1;
+}
+
+.grid-body > aside {
+ flex: 0 0 14em;
+}
+

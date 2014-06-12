@@ -61,9 +61,9 @@ gulp.task('connect', function () {
     .use(connect.directory('app'));
 
   require('http').createServer(app)
-    .listen(9069)
+    .listen(9068)
     .on('listening', function () {
-        console.log('Started connect web server on http://localhost:9069');
+        console.log('Started connect web server on http://localhost:9068');
       });
 });
 

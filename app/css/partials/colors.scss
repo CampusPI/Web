@@ -1,0 +1,50 @@
+$color-green: #3cb258;
+$color-purple: #5c65f4;
+$color-blue: #00abf1;
+$color-yellow: #f3cc5a;
+$color-red: #e94e4c;
+
+.label-green {
+  background-color: $color-green;
+}
+
+.label-purple {
+  background-color: $color-purple;
+}
+
+.label-blue {
+  background-color: $color-blue;
+}
+
+.label-yellow {
+  background-color: $color-yellow;
+}
+
+.label-red {
+  background-color: $color-red;
+}
+
+.color-green {
+  color: $color-green;
+  fill: $color-green;
+}
+
+.color-purple {
+  color: $color-purple;
+  fill: $color-purple;
+}
+
+.color-blue {
+  color: $color-blue;
+  fill: $color-blue;
+}
+
+.color-yellow {
+  color: $color-yellow;
+  fill: $color-yellow;
+}
+
+.color-red {
+  color: $color-red;
+  fill: $color-red;
+}
