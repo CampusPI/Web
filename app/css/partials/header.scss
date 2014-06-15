@@ -1,9 +1,33 @@
-.login {
-  padding: 0 20px;
+.logo > p {
+  font-family: $logo-font;
+  text-align: center;
+  line-height: $headheight;
+  font-size: 2em;
+  margin: 0;
+  span {
+    color: lighten( $color-blue, 15% );
+  }
+}
+
+
+.login > a {
+  padding: $headheight/2 40px;
+  text-align: center;
+  line-height: $headheight;
+  text-decoration: none;
+  color: $color-white;
+}
+
+
+.search {
+  padding-left: 2em;
+  color: #aaa;
 }
 
 .search > input {
-  width: 100%;
+  box-sizing: border-box;
+  font-size: 1.5em;
+  height: $headheight - 2px;
   border: 0;
-  margin: 0;
+  outline: none;
 }

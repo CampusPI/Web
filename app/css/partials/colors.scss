@@ -1,9 +1,3 @@
-$color-green: #3cb258;
-$color-purple: #5c65f4;
-$color-blue: #00abf1;
-$color-yellow: #f3cc5a;
-$color-red: #e94e4c;
-
 .label-green {
   background-color: $color-green;
 }
@@ -23,6 +17,15 @@ $color-red: #e94e4c;
 .label-red {
   background-color: $color-red;
 }
+
+.label-black {
+  background-color: $color-black;
+}
+
+.label-white {
+  background-color: $color-white;
+}
+
 
 .color-green {
   color: $color-green;
@@ -47,4 +50,14 @@ $color-red: #e94e4c;
 .color-red {
   color: $color-red;
   fill: $color-red;
+}
+
+.color-black {
+  color: $color-black;
+  fill: $color-black;
+}
+
+.color-white {
+  color: $color-white;
+  fill: $color-white;
 }

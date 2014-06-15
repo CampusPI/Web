@@ -5,12 +5,12 @@
 }
 
 .grid > header {
-  height: 60px;
+  height: $headheight;
   display: flex;
 }
 
 .grid > header > .logo {
-  flex: 0 0 14em;
+  flex: 0 0 $sidewidth;
 }
 
 .grid > header > .search {
@@ -31,6 +31,6 @@
 }
 
 .grid-body > aside {
- flex: 0 0 14em;
+ flex: 0 0 $sidewidth;
 }
 

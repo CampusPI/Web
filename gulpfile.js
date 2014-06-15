@@ -22,7 +22,13 @@ gulp.task('scripts', function () {
     .pipe($.size());
 });
 
-gulp.task('html', ['styles', 'scripts'], function () {
+gulp.task('fonts', function () {
+  return gulp.src('app/fonts/*')
+    .pipe(gulp.dest('dist/fonts'))
+    .pipe($.size());
+});
+
+gulp.task('html', ['styles', 'scripts', 'fonts'], function () {
   var jsFilter = $.filter('**/*.js');
   var cssFilter = $.filter('**/*.css');
 
