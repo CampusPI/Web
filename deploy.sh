@@ -9,7 +9,7 @@ default_username=CampusBot
 default_email=joao.campinhos+deploy@gmail.com
 
 #repository to deploy to. must be readable and writable.
-repo=https://$GITHUB_TOKEN@github.com/CampusPI/TV.git
+repo=https://$GITHUB_TOKEN@github.com/CampusPI/Web.git
 
 if [[ $1 = "-v" || $1 = "--verbose" ]]; then
   verbose=true
