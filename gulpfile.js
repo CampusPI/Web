@@ -28,7 +28,13 @@ gulp.task('fonts', function () {
     .pipe($.size());
 });
 
-gulp.task('html', ['styles', 'scripts', 'fonts'], function () {
+gulp.task('templates', function () {
+  return gulp.src('app/templates/*.html')
+    .pipe(gulp.dest('dist/templates'))
+    .pipe($.size());
+});
+
+gulp.task('html', ['styles', 'scripts', 'fonts', 'templates'], function () {
   var jsFilter = $.filter('**/*.js');
   var cssFilter = $.filter('**/*.css');
 
