@@ -12,7 +12,8 @@
   <header>
     <div class="logo"><p class="color-blue">Campus<span>TV</span></p></div>
     <div class="search"><i class="fa fa-search"></i><input type="search" placeholder="search" name="search"></div>
-    <div class="login btn-blue" ng-controller="loginCtrl"><a href ng-click="showModal()">Login</a></div>
+    <div class="login btn-blue" ng-hide="user.name" ng-controller="loginCtrl"><a href ng-click="login()">Login</a></div>
+    <div class="login btn-green" ng-show="user.name" ng-controller="loginCtrl"><a href ng-click="login()">{{user.name}}</a></div>
   </header>
   <div class="grid-body">
     <aside class="label-black sidebar">
