@@ -23,6 +23,14 @@
         border-color: darken($color-blue, 12%);
   }
 }
+.btn-green {
+  background-color: $color-green;
+      border-color: darken($color-green, 5%);
+  &:hover {
+    background-color: darken($color-green, 10%);
+        border-color: darken($color-green, 12%);
+  }
+}
 
 .sidebar .btn {
   width: 90%;
