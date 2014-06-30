@@ -1,0 +1,15 @@
+<h1 class="title">{{data.titulo || data.name}}</h1>
+
+<div ng-if="data.type === 'video'">
+  <div youtube></div>
+</div>
+
+<div ng-if="data.type === 'new'">
+  <img style="max-width: 100%" src="http://www.fct.unl.pt/sites/default/files/imagens/noticias/noticias.jpg">
+</div>
+
+<div ng-if="data.type === 'biblio'">
+  <img style="max-width: 100%" src="{{data.image}}">
+</div>
+
+{{data}}

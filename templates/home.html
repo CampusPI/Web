@@ -1,7 +1,10 @@
-<div class="test label-blue"></div>
-<div class="test label-green"></div>
-<div class="test label-red"></div>
-<div class="test label-purple"></div>
-<div class="test label-yellow"></div>
-<div class="test label-black"></div>
-<div class="test label-white"></div>
+<h1 class="title">Últimos Conteúdos</h1>
+
+<div class="video container">
+  <div ng-repeat="d in coisas" >
+    <div ng-click="go('/content/'+d._id)">
+      <img src="{{d.thumbnail || d.image || imgDef}}">
+      <p>{{d.titulo || d.name}}</p>
+    </div>
+  </div>
+</div>

@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <title>Campus TV</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/main.css"/>
+  <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
 </head>
-<body class="grid">
+<body class="grid" ng-controller="appCtrl">
   <header>
-    <div class="logo"><p class="color-blue">Campus<span>TV</span></p></div>
+    <div class="logo" ng-click="go('/')"><p class="color-blue">Campus<span>TV</span></p></div>
     <div class="search"><i class="fa fa-search"></i><input type="search" placeholder="search" name="search"></div>
     <div class="login btn-blue" ng-hide="user.name" ng-controller="loginCtrl"><a href ng-click="login()">Login</a></div>
     <div class="login btn-green" ng-show="user.name" ng-controller="loginCtrl"><a href ng-click="login()">{{user.name}}</a></div>
