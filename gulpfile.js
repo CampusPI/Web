@@ -87,7 +87,7 @@ gulp.task('watch', ['connect', 'serve'], function () {
   var server = $.livereload();
 
   gulp.watch([
-    'app/*.html',
+    'app/**/*.html',
     '.tmp/css/**/*.css',
     'app/js/**/*.js',
   ]).on('change', function (file) {

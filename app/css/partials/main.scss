@@ -1,3 +1,26 @@
 main {
   border-top: 2px solid $color-white;
+  padding: 20px;
+  overflow:auto;
+}
+
+.video.container {
+  > div {
+    display: inline-block;
+  }
+  > div > div {
+    width: $sidewidth;
+    display: inline-block;
+    cursor: pointer;
+    padding: 20px;
+    box-sizing: content-box;
+    vertical-align: top;
+    img {
+      max-width: $sidewidth;
+      max-height: $sidewidth/2;
+    }
+  }
+  > div > div:hover {
+    background-color: $color-white;
+  }
 }

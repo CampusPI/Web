@@ -11,9 +11,9 @@ angular.module('tvApp', ['ngResource', 'btford.modal', 'ngRoute', 'googleOauth']
       })
 
       //DUMMY ROUTE!!!
-      .when('/videos', {
-        templateUrl : 'templates/video.html',
-        controller  : 'videoCtrl'
+      .when('/content/:id', {
+        templateUrl : 'templates/content.html',
+        controller  : 'contentCtrl'
       });
   }).
 
