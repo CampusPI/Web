@@ -1,8 +1,14 @@
 <h1 class="title">Últimos Conteúdos</h1>
 
 <div class="video container">
+  <div>
+    <div ng-if="new" class="highlight" ng-click="go('/view/'+new._id)">
+      <img src="{{new.thumbnail || new.image || imgDef}}">
+      <p>{{new.titulo || new.name}}</p>
+    </div>
+  </div>
   <div ng-repeat="d in coisas" >
-    <div ng-click="go('/content/'+d._id)">
+    <div ng-click="go('/view/'+d._id)">
       <img src="{{d.thumbnail || d.image || imgDef}}">
       <p>{{d.titulo || d.name}}</p>
     </div>

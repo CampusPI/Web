@@ -6,13 +6,21 @@ angular.module('tvApp', ['ngResource', 'btford.modal', 'ngRoute', 'googleOauth']
     $routeProvider
       // route for the home page
       .when('/', {
-        templateUrl : 'templates/home.html',
-        controller  : 'appCtrl'
+        templateUrl : 'templates/home.html'
       })
 
-      //DUMMY ROUTE!!!
-      .when('/content/:id', {
+      .when('/list/favoritos', {
+        templateUrl : 'templates/list.html',
+        controller  : 'favsCtrl'
+      })
+
+      .when('/content/:type', {
         templateUrl : 'templates/content.html',
+        controller  : 'typeContentCtrl'
+      })
+
+      .when('/view/:id', {
+        templateUrl : 'templates/view.html',
         controller  : 'contentCtrl'
       });
   }).

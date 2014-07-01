@@ -8,6 +8,13 @@ main {
   > div {
     display: inline-block;
   }
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+  p {
+    margin-bottom: 0;
+  }
   > div > div {
     width: $sidewidth;
     display: inline-block;
@@ -17,7 +24,13 @@ main {
     vertical-align: top;
     img {
       max-width: $sidewidth;
-      max-height: $sidewidth/2;
+      max-height: $sidewidth/1.5;
+    }
+  }
+  > div > div.highlight {
+    background-color: $color-yellow;
+    &:hover {
+      background-color: lighten($color-yellow,20%);
     }
   }
   > div > div:hover {
