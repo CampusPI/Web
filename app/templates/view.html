@@ -2,14 +2,20 @@
 
 <div ng-if="data.type === 'video'">
   <div youtube></div>
+  <br>
+  {{data.description}}
 </div>
 
 <div ng-if="data.type === 'new'">
   <img style="max-width: 100%" src="http://www.fct.unl.pt/sites/default/files/imagens/noticias/noticias.jpg">
+  <br>
+  <a ng-href="{{data.link}}">Fonte</a>
 </div>
 
 <div ng-if="data.type === 'biblio'">
   <img style="max-width: 100%" src="{{data.image}}">
+  <br>
+  <a ng-href="{{data.link}}">Fonte</a>
 </div>
 
-{{data}}
+<div share-links="Facebook, Twitter, LinkedIn" share-title="Article Title"></div>
