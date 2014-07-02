@@ -22,6 +22,11 @@ angular.module('tvApp', ['ngResource', 'btford.modal', 'ngRoute', 'googleOauth',
       .when('/view/:id', {
         templateUrl : 'templates/view.html',
         controller  : 'contentCtrl'
+      })
+
+      .when('/upload', {
+        templateUrl : 'templates/upload.html',
+        controller  : 'uploadCtrl'
       });
   }).
 

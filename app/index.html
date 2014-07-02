@@ -25,7 +25,7 @@
         <div class="label-blue"></div>
         <div class="label-blue light"></div>
       </div>
-      <div ng-if="logged" class="center-text"><a href="#" class="btn btn-blue center">Novo Conteúdo</a></div>
+      <div ng-if="logged" class="center-text"><a ng-class="getClass('/upload')" href="/#/upload" class="btn btn-blue center">Novo Conteúdo</a></div>
       <div class="list">
           <h3 ng-if="logged">Listas</h3>
           <ul ng-if="logged">
@@ -61,12 +61,14 @@
   <script src="js/services/content.js"></script>
   <script src="js/services/updater.js"></script>
   <script src="js/services/login.js"></script>
+  <script src="js/services/upload.js"></script>
   <script src="js/services/favorites.js"></script>
   <!--CONTROLLERS-->
   <script src="js/controllers/app.js"></script>
   <script src="js/controllers/content.js"></script>
   <script src="js/controllers/type.js"></script>
   <script src="js/controllers/favs.js"></script>
+  <script src="js/controllers/upload.js"></script>
   <!--DIRECTIVES-->
   <script src="js/directives/youtube.js"></script>
   <!-- endbuild -->
