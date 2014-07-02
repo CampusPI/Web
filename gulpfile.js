@@ -50,6 +50,8 @@ gulp.task('html', ['styles', 'scripts', 'fonts', 'templates'], function () {
     .pipe(cssFilter.restore())
     .pipe($.useref.restore())
     .pipe($.useref())
+    .pipe($.replace('http://localhost:8080', 'http://server.pi.campinhos.pt'))
+    .pipe($.replace('http://localhost:9068', 'http://server.pi.campinhos.pt'))
     .pipe(gulp.dest('dist'))
     .pipe($.size());
 });

@@ -27,20 +27,3 @@ angular.module('tvApp').factory('LoginService', function ($http, endpoint, Token
     }
   };
 });
-
-/*
-var verify = function() {
-    $scope.accessToken = Token.get();
-    if ($scope.accessToken) {
-      Token.verifyAsync($scope.accessToken).
-        then(function() {
-          $scope.accessTokenVerified = true;
-          $http.get('http://localhost:8080/api/web/user', {headers: {'Authorization': 'Bearer '+$scope.accessToken}}).success(function(data) {
-            $scope.user = data;
-          });
-        }, function() {
-          console.log('Failed to verify token.');
-        });
-    }
-  };
-  */
