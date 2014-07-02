@@ -51,7 +51,7 @@ gulp.task('html', ['styles', 'scripts', 'fonts', 'templates'], function () {
     .pipe($.useref.restore())
     .pipe($.useref())
     .pipe($.replace('http://localhost:8080', 'http://server.pi.campinhos.pt'))
-    .pipe($.replace('http://localhost:9068', 'http://server.pi.campinhos.pt'))
+    .pipe($.replace('http://localhost:9068', 'http://campuspi.github.io/Web'))
     .pipe(gulp.dest('dist'))
     .pipe($.size());
 });
