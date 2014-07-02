@@ -28,8 +28,7 @@ angular.module('tvApp', ['ngResource', 'btford.modal', 'ngRoute', 'googleOauth',
   config(function(TokenProvider) {
     TokenProvider.extendConfig({
       clientId: '859779641004-cvl4ppt05dj26eprlv0eer3hrbmkpudf.apps.googleusercontent.com',
-      redirectUri: 'http://localhost:9068/bower_components/angular-oauth/src/oauth2callback.html',
-      //redirectUri: baseUrl + 'src/oauth2callback.html',  // allow lunching demo from a mirror
+      redirectUri: 'http://localhost:9068/oauth2callback.html',
       scopes: ['https://www.googleapis.com/auth/userinfo.email']
     });
   });
