@@ -1,0 +1,29 @@
+<h1 class="title">Inserir Conteúdos</h1>
+
+<div>
+  <form name="upload_form" ng-submit="upload(selectedType)">
+
+    <input type="radio" name="contentType" ng-model="selectedType" value="video" ng-click="show()">Video
+    <input type="radio" name="contentType" ng-model="selectedType" value="new" ng-click="show()">Artigo
+    <br>
+    
+    <div ng-hide="canShow()">
+      <div ng-hide="isCheckboxSelected('new')">
+        <br>
+        Link: <input type="url" name="url" ng-model="url"/><br>
+        <br>
+        <button type="submit">Enviar</button>
+      </div>
+
+      <div ng-hide="isCheckboxSelected('video')">
+        <br>
+        Título: <input type="text" name="titulo" ng-model="titulo"/><br>
+        Conteúdo: <textarea name="conteudo" ng-model="conteudo"/></textarea><br>
+        Link: <input type="url" name="url" ng-model="url"/><br>
+        <br>
+        <button type="submit">Enviar</button>
+      </div>
+    </div>
+
+  </form>
+</div>
