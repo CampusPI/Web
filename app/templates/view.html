@@ -1,18 +1,18 @@
 <h1 class="title">{{data.titulo || data.name}}</h1>
 
-<div ng-if="data.type === 'video'">
+<div ng-if="data.videoId">
   <div youtube></div>
   <br>
   {{data.description}}
 </div>
 
-<div ng-if="data.type === 'new'">
+<div ng-if="data.conteudo">
   <img style="max-width: 100%" src="http://www.fct.unl.pt/sites/default/files/imagens/noticias/noticias.jpg">
   <br>
   <a ng-href="{{data.link}}">Fonte</a>
 </div>
 
-<div ng-if="data.type === 'biblio'">
+<div ng-if="!data.conteudo && !data.videoId">
   <img style="max-width: 100%" src="{{data.image}}">
   <br>
   <a ng-href="{{data.link}}">Fonte</a>

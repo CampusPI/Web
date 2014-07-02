@@ -1,2 +1,11 @@
 <h1 class="title">Favoritos</h1>
 <h3 ng-if="favs.length===0">Ainda não adicionou nenhum favorito</h3>
+
+<div class="video container">
+  <div ng-repeat="d in favs" >
+    <div ng-click="go('/view/'+d._id)">
+      <img src="{{d.thumbnail || d.image || imgDef}}">
+      <p>{{d.titulo || d.name}}</p>
+    </div>
+  </div>
+</div>
