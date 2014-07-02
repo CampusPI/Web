@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('tvApp', ['ngResource', 'btford.modal', 'ngRoute', 'googleOauth'])
+angular.module('tvApp', ['ngResource', 'btford.modal', 'ngRoute', 'googleOauth', 'td.easySocialShare'])
 
   .config(function($routeProvider) {
     $routeProvider

@@ -6,9 +6,7 @@
     "angular-resource": "1.2.16",
     "angular-route": "1.2.16",
     "angular-modal": "0.3.0",
-    "angular-oauth": "*"
-  },
-  "resolutions": {
-    "angular-oauth": "c6eb75a940b578cd6cac41dca86336da8c3e1f76"
+    "angular-oauth": "joaocampinhos/angular-oauth",
+    "angular-easy-social-share": "*"
   }
 }

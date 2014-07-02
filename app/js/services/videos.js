@@ -20,6 +20,14 @@ angular.module('tvApp').factory('ScheduleService', function ($http, endpoint) {
           return element._id === id;
         });
       });
+    },
+    getc: function(id) {
+      return $http({
+        method: 'GET',
+        url: endpoint+'/api/web/content/'+id
+      }).then(function(response) {
+        return response.data;
+      });
     }
   };
 });
