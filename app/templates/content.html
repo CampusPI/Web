@@ -1,11 +1,35 @@
 <div ng-if="type==='videos'">
   <h1 class="title">Vídeos</h1>
+  <div class="video container">
+    <div ng-repeat="v in videos" >
+      <div ng-click="go('/view/'+v._id)">
+        <img src="{{v.thumbnail}}">
+        <p>{{v.titulo || v.name}}</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div ng-if="type==='noticias'">
   <h1 class="title">Notícias</h1>
+  <div class="video container">
+    <div ng-repeat="n in news" >
+      <div ng-click="go('/view/'+n._id)">
+        <img src="{{imgDef}}">
+        <p>{{n.titulo}}</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div ng-if="type==='eventos'">
   <h1 class="title">Eventos</h1>
+  <div class="video container">
+    <div ng-repeat="e in events" >
+      <div ng-click="go('/view/'+e._id)">
+        <p>{{e.titulo}}</p>
+        <img src="{{e.image}}">
+      </div>
+    </div>
+  </div>
 </div>
