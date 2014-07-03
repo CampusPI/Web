@@ -1,7 +1,9 @@
+<p class="aviso" ng-show="enviado">Conteúdo Enviado <span ng-click="apagaOJP()"><i class="fa fa-times-circle"></i></span></p>
+
 <h1 class="title">Inserir Conteúdos</h1>
 
 <div>
-  <form name="upload_form" ng-submit="upload(selectedType)">
+  <form name="upload_form" ng-submit="upload(tabv)">
 
     <div class="tabs">
       <div class="tab" ng-class="{'tab-s': tabv}" ng-click="video()">Vídeo</div><!--
@@ -14,7 +16,7 @@
         <br>
         <div class="form-group">
           <label for="url">Link</label>
-          <input type="url" name="url" class="form-control" id="exurl">
+          <input type="url" name="url" ng-model="url" class="form-control" id="exurl">
         </div>
         <button class="btn btn-green small" type="submit">Enviar</button>
       </div>
