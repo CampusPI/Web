@@ -4,18 +4,23 @@
   <div youtube></div>
   <br>
   {{data.description}}
+  <hr>
 </div>
 
 <div ng-if="data.conteudo">
   <img style="max-width: 100%" src="http://www.fct.unl.pt/sites/default/files/imagens/noticias/noticias.jpg">
   <br>
-  <a ng-href="{{data.link}}">Fonte</a>
+  <span>Ver notícia completa </span><a ng-href="{{data.link}}">aqui</a>
+  <hr>
 </div>
 
 <div ng-if="!data.conteudo && !data.videoId">
   <img style="max-width: 100%" src="{{data.image}}">
   <br>
-  <a ng-href="{{data.link}}">Fonte</a>
+  <span>Ver evento completo </span><a ng-href="{{data.link}}">aqui</a>
+  <hr>
 </div>
 
-<div share-links="Facebook, Twitter, LinkedIn" share-title="Article Title"></div>
+  <span ng-show="logged" ng-if="!isFav" ng-click="add(data._id)" class="fav btn btn-green btn-outline">Adicionar aos favoritos<i class="color-green fa fa-star"></i></span>
+  <span ng-show="logged" ng-if="isFav" ng-click="rem(data._id)" class="fav btn btn-red btn-outline">Remover dos favoritos<i class="color-red fa fa-star"></i></span>
+  <span class="fav btn share" share-links="Facebook, Twitter, LinkedIn" share-title="Article Title"></span>

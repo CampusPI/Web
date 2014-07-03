@@ -20,9 +20,36 @@ angular.module('tvApp').factory('FavoritesService', function ($http, endpoint, T
         headers: {
           'Authorization': 'Bearer '+ Token.get()
         },
-        data: {videoid: videoid}
+        data: {id: videoid}
       }).then(function(response) {
         return response.data;
+      });
+    },
+    removeFavorite: function(id) {
+      return $http({
+        method: 'DELETE',
+        url: endpoint+'/api/web/favorites',
+        headers: {
+          'Authorization': 'Bearer '+ Token.get()
+        },
+        data: {id: id}
+      }).then(function(response) {
+        return response.data;
+      });
+    },
+    isFav: function(id) {
+      return $http({
+        method: 'GET',
+        url: endpoint+'/api/web/favorites',
+        headers: {
+          'Authorization': 'Bearer '+ Token.get()
+        }
+      }).then(function(response) {
+        console.log(response.data);
+        console.log(id);
+        return response.data.filter(function(element){
+          return element._id === id;
+        });
       });
     }
   };
