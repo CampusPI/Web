@@ -79,3 +79,19 @@ a {
   width: 60%;
   margin: 0 auto;
 }
+
+.aviso {
+  background-color: $color-green;
+  width: 30%;
+  margin: 0 auto;
+  color: $color-white;
+  padding: 6px 10px;
+  padding-right: 0;
+  border-radius: 20px;
+  span {
+    float: right;
+    .fa {
+      color: white !important;
+    }
+  }
+}

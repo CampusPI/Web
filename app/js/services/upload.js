@@ -14,7 +14,7 @@ angular.module('tvApp').factory('UploadService', function ($http, endpoint, Toke
           videoId: videoId
         }
       }).then(function(response) {
-        console.log(response.data);
+        console.log(response);
       });
     },
     setNew: function(titulo, conteudo, url, date) {

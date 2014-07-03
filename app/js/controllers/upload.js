@@ -2,36 +2,33 @@
 
 angular.module('tvApp').controller('uploadCtrl', function ($scope, $routeParams, UploadService) {
 
+  $scope.enviado = false;
+
+  $scope.apagaOJP = function() {
+    $scope.enviado = false;
+    $scope.titulo = '';
+    $scope.conteudo = '';
+    $scope.url = '';
+  };
+
   $scope.tabv = true;
   $scope.video = function() {$scope.tabv = true;};
   $scope.artigo = function() {$scope.tabv = false;};
 
-
-  $scope.showOptions = true;
-
-  $scope.isCheckboxSelected = function(type) {
-    return type === $scope.selectedType;
-  };
-
-  $scope.show = function () {
-    $scope.showOptions = false;
-  };
-
-  $scope.canShow = function () {
-    return $scope.showOptions;
-  };
-
   $scope.upload = function (selectedType) {
-    if(selectedType === 'video'){
+    if(selectedType){
       var id = $scope.url.split('v=')[1].substring(0, 11);
       UploadService.setVideo(id).then(function(data) {
         console.log(data);
+        $scope.enviado = true;
       });
     }
     else{
+      console.log('sim');
       UploadService.setNew($scope.titulo, $scope.conteudo, $scope.url, new Date()).then(function(data) {
         console.log(data);
         $scope.data = data;
+        $scope.enviado = true;
       });
     }
   };
