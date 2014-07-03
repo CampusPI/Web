@@ -25,18 +25,17 @@
         <div class="label-blue"></div>
         <div class="label-blue light"></div>
       </div>
-      <div ng-if="logged" class="center-text"><a ng-class="getClass('/upload')" href="/#/upload" class="btn btn-blue center">Novo Conteúdo</a></div>
+      <div ng-if="logged" class="center-text"><a ng-class="getClass('/upload')" href="#/upload" class="btn btn-blue center">Novo Conteúdo</a></div>
       <div class="list">
           <h3 ng-if="logged">Listas</h3>
           <ul ng-if="logged">
-            <li><a>Ver mais tarde</a></li>
-            <li><a ng-class="getClass('/list/favoritos')" href="/#/list/favoritos">Favoritos</a></li>
+            <li><a ng-class="getClass('/list/favoritos')" href="#/list/favoritos">Favoritos</a></li>
           </ul>
         <h3>Conteúdos</h3>
         <ul>
-          <li><a ng-class="getClass('/content/videos')" href="/#/content/videos">Vídeos</a></li>
-          <li><a ng-class="getClass('/content/noticias')" href="/#/content/noticias">Notícias</a></li>
-          <li><a ng-class="getClass('/content/eventos')" href="/#/content/eventos">Eventos</a></li>
+          <li><a ng-class="getClass('/content/videos')" href="#/content/videos">Vídeos</a></li>
+          <li><a ng-class="getClass('/content/noticias')" href="#/content/noticias">Notícias</a></li>
+          <li><a ng-class="getClass('/content/eventos')" href="#/content/eventos">Eventos</a></li>
         </ul>
       </div>
     </aside>
