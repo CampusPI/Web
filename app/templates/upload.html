@@ -3,25 +3,37 @@
 <div>
   <form name="upload_form" ng-submit="upload(selectedType)">
 
-    <input type="radio" name="contentType" ng-model="selectedType" value="video" ng-click="show()">Video
-    <input type="radio" name="contentType" ng-model="selectedType" value="new" ng-click="show()">Artigo
+    <div class="tabs">
+      <div class="tab" ng-class="{'tab-s': tabv}" ng-click="video()">Vídeo</div><!--
+      --><div class="tab" ng-class="{'tab-s': !tabv}" ng-click="artigo()">Artigo</div>
+    </div>
+
     <br>
-    
-    <div ng-hide="canShow()">
-      <div ng-hide="isCheckboxSelected('new')">
+
+      <div class="form" ng-show="tabv">
         <br>
-        Link: <input type="url" name="url" ng-model="url"/><br>
-        <br>
-        <button type="submit">Enviar</button>
+        <div class="form-group">
+          <label for="url">Link</label>
+          <input type="url" name="url" class="form-control" id="exurl">
+        </div>
+        <button class="btn btn-green small" type="submit">Enviar</button>
       </div>
 
-      <div ng-hide="isCheckboxSelected('video')">
+      <div class="form" ng-hide="tabv">
         <br>
-        Título: <input type="text" name="titulo" ng-model="titulo"/><br>
-        Conteúdo: <textarea name="conteudo" ng-model="conteudo"/></textarea><br>
-        Link: <input type="url" name="url" ng-model="url"/><br>
-        <br>
-        <button type="submit">Enviar</button>
+        <div class="form-group">
+          <label for="titulo">Título</label>
+          <input type="text" name="titulo" ng-model="titulo"/>
+        </div>
+        <div class="form-group">
+          <label for="conteudo">Conteúdo</label>
+          <textarea name="conteudo" ng-model="conteudo"/></textarea>
+        </div>
+        <div class="form-group">
+          <label for="url">Link</label>
+          <input type="url" name="url" ng-model="url"/>
+        </div>
+        <button class="btn btn-green small" type="submit">Enviar</button>
       </div>
     </div>
 

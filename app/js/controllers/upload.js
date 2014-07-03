@@ -1,6 +1,12 @@
 'use strict';
 
 angular.module('tvApp').controller('uploadCtrl', function ($scope, $routeParams, UploadService) {
+
+  $scope.tabv = true;
+  $scope.video = function() {$scope.tabv = true;};
+  $scope.artigo = function() {$scope.tabv = false;};
+
+
   $scope.showOptions = true;
 
   $scope.isCheckboxSelected = function(type) {
