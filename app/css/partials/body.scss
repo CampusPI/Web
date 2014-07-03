@@ -18,3 +18,33 @@ body {
   margin-right: 10px;
   color: #aaa;
 }
+
+hr {
+  border: 1px solid $color-white;
+}
+
+a {
+  text-decoration: none;
+  color: $color-purple;
+  &:hover {
+    color: darken($color-purple,10%);
+  }
+}
+
+.big {
+  font-size: 1.25em;
+}
+
+.fav {
+  margin: 0 !important;
+}
+
+.share {
+  display: inline-block;
+  a {
+    color: $color-blue;
+    &:hover {
+      color: darken($color-blue,10%);
+    }
+  }
+}
