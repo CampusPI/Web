@@ -10,6 +10,9 @@
   }
 }
 
+.login {
+  border: none !important;
+}
 
 .login > a {
   padding: $headheight/2 40px;
@@ -19,6 +22,14 @@
   color: $color-white;
 }
 
+.login > span {
+  border: 1px solid white;
+  cursor: pointer;
+  color: $color-black;
+  background-color: white;
+  line-height: $headheight;
+  padding: 20px 15px;
+}
 
 .search {
   padding-left: 2em;
